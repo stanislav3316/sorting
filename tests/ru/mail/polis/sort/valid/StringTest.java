@@ -1,4 +1,7 @@
-package ru.mail.polis.sort;
+package ru.mail.polis.sort.valid;
+
+import ru.mail.polis.sort.Helper;
+import ru.mail.polis.sort.MSDString;
 
 import java.util.Arrays;
 
