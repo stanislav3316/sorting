@@ -21,6 +21,7 @@ public class MergeSort {
         leftArr = sort(leftArr);
         rightArr = sort(rightArr);
 
+        // merge
         int k = 0, j = 0;
         while (k < leftArr.length && j < rightArr.length) {
             if (leftArr[k] <= rightArr[j]) {

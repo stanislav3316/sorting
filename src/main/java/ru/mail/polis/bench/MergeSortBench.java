@@ -37,9 +37,15 @@ public class MergeSortBench {
     public void setUpTrial() {
         data = new int[10][100];
         for (int i = 0; i < 10; i++) {
+            //average case
             //data[i] = Helper.gen(50000, 5000);
             //data[i] = Helper.gen(10000, 1000);
-            data[i] = Helper.gen(100000, 10000);
+            //data[i] = Helper.gen(100000, 10000);
+
+            //the best case
+            //data[i] = Helper.genSortedArr(10000);
+            //data[i] = Helper.genSortedArr(100000);
+            //data[i] = Helper.genSortedArr(50000);
         }
     }
 

@@ -41,7 +41,7 @@ public class BinaryQuickSortBench {
             //the worth case
             //data[i] = Helper.getReversArr(100000);
             //data[i] = Helper.getReversArr(10000);
-            data[i] = Helper.getReversArr(10000);
+            //data[i] = Helper.getReversArr(10000);
         }
     }
 

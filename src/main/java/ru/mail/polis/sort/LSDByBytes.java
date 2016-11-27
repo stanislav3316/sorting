@@ -6,18 +6,24 @@ import java.util.Arrays;
  * Created by iters on 11/26/16.
  */
 public class LSDByBytes {
-    public static long[] sort(long[] a) {
+    public static void main(String[] args) {
+        long[] arr = {1,4,5,3,1,3,4,1,4};
+        arr = sort(arr);
+        System.out.println(Arrays.toString(arr));
+    }
+
+    public static long[] sort(long[] arr) {
         final int R = 1 << 8;
         final int MASK = R - 1;
         final int w = 8;
 
-        int n = a.length;
+        int n = arr.length;
         long[] temp = new long[n];
 
         for (int d = 0; d < w; d++) {
             long[] count = new long[R + 1];
             for (int i = 0; i < n; i++) {
-                int c = (int) ((a[i] >> 8 * d) & MASK);
+                int c = (int) ((arr[i] >> 8 * d) & MASK);
                 count[(c + 1)]++;
             }
 
@@ -34,13 +40,13 @@ public class LSDByBytes {
             }
 
             for (int i = 0; i < n; i++) {
-                int c = (int) ((a[i] >> 8 * d) & MASK);
-                temp[(int) count[c]++] = a[i];
+                int c = (int) ((arr[i] >> 8 * d) & MASK);
+                temp[(int) count[c]++] = arr[i];
             }
 
             for (int i = 0; i < n; i++)
-                a[i] = temp[i];
+                arr[i] = temp[i];
         }
-        return a;
+        return arr;
     }
 }

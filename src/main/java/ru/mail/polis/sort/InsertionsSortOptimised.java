@@ -1,13 +1,11 @@
 package ru.mail.polis.sort;
 
-import java.util.Objects;
-
 /**
  * Created by iters on 11/18/16.
  */
 public class InsertionsSortOptimised {
     public static int[] sort(int[] a) {
-        if (Objects.isNull(a))
+        if (a == null)
             return new int[0];
 
         for (int i = 1; i <= a.length - 1; i++) {

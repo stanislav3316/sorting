@@ -22,7 +22,7 @@ public class QuickSortFix {
         sort(arr, m + 1, right);
     }
 
-    // выбор первого элемента как опорного
+    // выбор среднего элемента как опорного
     private static int partition(int[] arr, int left, int right) {
         int index = (left + right + 1) / 2;
         Helper.swap(arr, left, index);
